@@ -1,0 +1,595 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+2024-11-24 16:43:35,831 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:<init>(563)) - starting cluster: numNameNodes=1, numDataNodes=1
+2024-11-24 16:43:36,231 INFO  [main] namenode.NameNode (NameNode.java:format(1264)) - Formatting using clusterid: testClusterID
+2024-11-24 16:43:36,245 INFO  [main] namenode.FSEditLog (FSEditLog.java:newInstance(232)) - Edit logging is async:true
+2024-11-24 16:43:36,259 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(843)) - KeyProvider: null
+2024-11-24 16:43:36,260 INFO  [main] namenode.FSNamesystem (FSNamesystemLock.java:<init>(141)) - fsLock is fair: true
+2024-11-24 16:43:36,260 INFO  [main] namenode.FSNamesystem (FSNamesystemLock.java:<init>(159)) - Detailed lock hold time metrics enabled: false
+2024-11-24 16:43:36,276 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(882)) - fsOwner                = tommi (auth:SIMPLE)
+2024-11-24 16:43:36,276 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(883)) - supergroup             = supergroup
+2024-11-24 16:43:36,276 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(884)) - isPermissionEnabled    = true
+2024-11-24 16:43:36,276 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(885)) - isStoragePolicyEnabled = true
+2024-11-24 16:43:36,276 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(896)) - HA Enabled: false
+2024-11-24 16:43:36,307 INFO  [main] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2024-11-24 16:43:36,394 INFO  [main] Configuration.deprecation (Configuration.java:logDeprecation(1442)) - hadoop.configured.node.mapping is deprecated. Instead, use net.topology.configured.node.mapping
+2024-11-24 16:43:36,394 INFO  [main] blockmanagement.DatanodeManager (DatanodeManager.java:setBlockInvalidateLimit(2125)) - dfs.block.invalidate.limit : configured=1000, counted=60, effected=1000
+2024-11-24 16:43:36,394 INFO  [main] blockmanagement.DatanodeManager (DatanodeManager.java:<init>(322)) - dfs.namenode.datanode.registration.ip-hostname-check=true
+2024-11-24 16:43:36,396 INFO  [main] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(77)) - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2024-11-24 16:43:36,396 INFO  [main] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(83)) - The block deletion will start around 2024 lis 24 16:43:36
+2024-11-24 16:43:36,398 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map BlocksMap
+2024-11-24 16:43:36,398 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:36,398 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 2.0% max memory 3.8 GB = 78.3 MB
+2024-11-24 16:43:36,398 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^23 = 8388608 entries
+2024-11-24 16:43:36,413 INFO  [main] blockmanagement.BlockManager (BlockManager.java:createSPSManager(5480)) - Storage policy satisfier is disabled
+2024-11-24 16:43:36,413 INFO  [main] blockmanagement.BlockManager (BlockManager.java:createBlockTokenSecretManager(633)) - dfs.block.access.token.enable = false
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(160)) - dfs.namenode.safemode.threshold-pct = 0.999
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(161)) - dfs.namenode.safemode.min.datanodes = 0
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(163)) - dfs.namenode.safemode.extension = 0
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(619)) - defaultReplication         = 1
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(620)) - maxReplication             = 512
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(621)) - minReplication             = 1
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(622)) - maxReplicationStreams      = 2
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(623)) - redundancyRecheckInterval  = 3000ms
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(624)) - encryptDataTransfer        = false
+2024-11-24 16:43:36,416 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(625)) - maxNumBlocksToLog          = 1000
+2024-11-24 16:43:36,439 INFO  [main] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - GLOBAL serial map: bits=29 maxEntries=536870911
+2024-11-24 16:43:36,439 INFO  [main] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - USER serial map: bits=24 maxEntries=16777215
+2024-11-24 16:43:36,439 INFO  [main] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - GROUP serial map: bits=24 maxEntries=16777215
+2024-11-24 16:43:36,439 INFO  [main] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - XATTR serial map: bits=24 maxEntries=16777215
+2024-11-24 16:43:36,445 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map INodeMap
+2024-11-24 16:43:36,445 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:36,445 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 1.0% max memory 3.8 GB = 39.2 MB
+2024-11-24 16:43:36,445 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^22 = 4194304 entries
+2024-11-24 16:43:36,450 INFO  [main] namenode.FSDirectory (FSDirectory.java:<init>(335)) - ACLs enabled? true
+2024-11-24 16:43:36,451 INFO  [main] namenode.FSDirectory (FSDirectory.java:<init>(339)) - POSIX ACL inheritance enabled? true
+2024-11-24 16:43:36,451 INFO  [main] namenode.FSDirectory (FSDirectory.java:<init>(343)) - XAttrs enabled? true
+2024-11-24 16:43:36,451 INFO  [main] namenode.NameNode (FSDirectory.java:<init>(406)) - Caching file names occurring more than 10 times
+2024-11-24 16:43:36,454 INFO  [main] snapshot.SnapshotManager (SnapshotManager.java:<init>(124)) - Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2024-11-24 16:43:36,454 INFO  [main] snapshot.SnapshotManager (DirectoryDiffListFactory.java:init(43)) - SkipList is disabled
+2024-11-24 16:43:36,457 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map cachedBlocks
+2024-11-24 16:43:36,457 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:36,458 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 0.25% max memory 3.8 GB = 9.8 MB
+2024-11-24 16:43:36,458 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^20 = 1048576 entries
+2024-11-24 16:43:36,464 INFO  [main] metrics.TopMetrics (TopMetrics.java:logConf(75)) - NNTop conf: dfs.namenode.top.window.num.buckets = null
+2024-11-24 16:43:36,464 INFO  [main] metrics.TopMetrics (TopMetrics.java:logConf(77)) - NNTop conf: dfs.namenode.top.num.users = null
+2024-11-24 16:43:36,464 INFO  [main] metrics.TopMetrics (TopMetrics.java:logConf(79)) - NNTop conf: dfs.namenode.top.windows.minutes = null
+2024-11-24 16:43:36,468 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1119)) - Retry cache on namenode is enabled
+2024-11-24 16:43:36,468 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1127)) - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2024-11-24 16:43:36,469 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map NameNodeRetryCache
+2024-11-24 16:43:36,469 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:36,469 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 0.029999999329447746% max memory 3.8 GB = 1.2 MB
+2024-11-24 16:43:36,469 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^17 = 131072 entries
+2024-11-24 16:43:36,495 INFO  [main] namenode.FSImage (FSImage.java:format(186)) - Allocated new BlockPoolId: BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:36,524 INFO  [main] common.Storage (NNStorage.java:format(595)) - Storage directory C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1 has been successfully formatted.
+2024-11-24 16:43:36,527 INFO  [main] common.Storage (NNStorage.java:format(595)) - Storage directory C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-2 has been successfully formatted.
+2024-11-24 16:43:36,530 INFO  [main] common.Storage (NNStorage.java:format(595)) - Storage directory C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name has been successfully formatted.
+2024-11-24 16:43:36,549 INFO  [FSImageSaver for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-2 of type IMAGE] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(732)) - Saving image file C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-2\current\fsimage.ckpt_0000000000000000000 using no compression
+2024-11-24 16:43:36,549 INFO  [FSImageSaver for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1 of type IMAGE] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(732)) - Saving image file C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1\current\fsimage.ckpt_0000000000000000000 using no compression
+2024-11-24 16:43:36,618 INFO  [FSImageSaver for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-2 of type IMAGE] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(736)) - Image file C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-2\current\fsimage.ckpt_0000000000000000000 of size 397 bytes saved in 0 seconds .
+2024-11-24 16:43:36,618 INFO  [FSImageSaver for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1 of type IMAGE] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(736)) - Image file C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1\current\fsimage.ckpt_0000000000000000000 of size 397 bytes saved in 0 seconds .
+2024-11-24 16:43:36,633 INFO  [main] namenode.NNStorageRetentionManager (NNStorageRetentionManager.java:getImageTxIdToRetain(203)) - Going to retain 1 images with txid >= 0
+2024-11-24 16:43:36,655 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:stopActiveServices(1466)) - Stopping services started for active state
+2024-11-24 16:43:36,656 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:stopStandbyServices(1570)) - Stopping services started for standby state
+2024-11-24 16:43:36,658 INFO  [main] namenode.NameNode (NameNode.java:createNameNode(1722)) - createNameNode []
+2024-11-24 16:43:36,694 WARN  [main] impl.MetricsConfig (MetricsConfig.java:loadFirst(136)) - Cannot locate configuration: tried hadoop-metrics2-namenode.properties,hadoop-metrics2.properties
+2024-11-24 16:43:36,776 INFO  [main] impl.MetricsSystemImpl (MetricsSystemImpl.java:startTimer(378)) - Scheduled Metric snapshot period at 10 second(s).
+2024-11-24 16:43:36,776 INFO  [main] impl.MetricsSystemImpl (MetricsSystemImpl.java:start(191)) - NameNode metrics system started
+2024-11-24 16:43:36,782 INFO  [main] namenode.NameNodeUtils (NameNodeUtils.java:getClientNamenodeAddress(79)) - fs.defaultFS is hdfs://127.0.0.1:0
+2024-11-24 16:43:36,812 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@5ba745bc] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2024-11-24 16:43:36,820 INFO  [main] hdfs.DFSUtil (DFSUtil.java:httpServerTemplateForNNAndJN(1695)) - Filter initializers set : org.apache.hadoop.hdfs.web.AuthFilterInitializer
+2024-11-24 16:43:36,824 INFO  [main] hdfs.DFSUtil (DFSUtil.java:httpServerTemplateForNNAndJN(1717)) - Starting Web-server for hdfs at: http://kubernetes.docker.internal:0
+2024-11-24 16:43:36,834 INFO  [main] util.log (Log.java:initialized(170)) - Logging initialized @1335ms to org.eclipse.jetty.util.log.Slf4jLog
+2024-11-24 16:43:36,882 INFO  [main] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(82)) - Http request log for http.requests.namenode is not defined
+2024-11-24 16:43:36,885 INFO  [main] http.HttpServer2 (HttpServer2.java:addGlobalFilter(1124)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2024-11-24 16:43:36,886 INFO  [main] http.HttpServer2 (HttpServer2.java:addFilter(1097)) - Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) to context hdfs
+2024-11-24 16:43:36,886 INFO  [main] http.HttpServer2 (HttpServer2.java:addFilter(1107)) - Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) to context static
+2024-11-24 16:43:36,907 INFO  [main] http.HttpServer2 (HttpServer2.java:addJerseyResourcePackage(951)) - addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
+2024-11-24 16:43:36,914 INFO  [main] http.HttpServer2 (HttpServer2.java:bindListener(1357)) - Jetty bound to port 50224
+2024-11-24 16:43:36,916 INFO  [main] server.Server (Server.java:doStart(375)) - jetty-9.4.51.v20230217; built: 2023-02-17T08:19:37.309Z; git: b45c405e4544384de066f814ed42ae3dceacdd49; jvm 21.0.5+11-LTS
+2024-11-24 16:43:36,933 INFO  [main] server.session (DefaultSessionIdManager.java:doStart(334)) - DefaultSessionIdManager workerName=node0
+2024-11-24 16:43:36,934 INFO  [main] server.session (DefaultSessionIdManager.java:doStart(339)) - No SessionScavenger set, using defaults
+2024-11-24 16:43:36,934 INFO  [main] server.session (HouseKeeper.java:startScavenging(132)) - node0 Scavenging every 660000ms
+2024-11-24 16:43:36,945 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(921)) - Started o.e.j.s.ServletContextHandler@2f879bab{static,/static,jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/static,AVAILABLE}
+2024-11-24 16:43:37,081 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(921)) - Started o.e.j.w.WebAppContext@4e61e4c2{hdfs,/,file:///C:/Users/tommi/AppData/Local/Temp/jetty-kubernetes_docker_internal-50224-hadoop-hdfs-3_3_6-tests_jar-_-any-9596983145786455895/webapp/,AVAILABLE}{jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/hdfs}
+2024-11-24 16:43:37,103 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStart(333)) - Started ServerConnector@11841b15{HTTP/1.1, (http/1.1)}{kubernetes.docker.internal:50224}
+2024-11-24 16:43:37,103 INFO  [main] server.Server (Server.java:doStart(415)) - Started @1604ms
+2024-11-24 16:43:37,103 WARN  [main] namenode.FSNamesystem (FSNamesystem.java:checkConfiguration(779)) - Only one namespace edits storage directory (dfs.namenode.edits.dir) configured. Beware of data loss due to lack of redundant storage directories!
+2024-11-24 16:43:37,105 INFO  [main] namenode.FSEditLog (FSEditLog.java:newInstance(232)) - Edit logging is async:true
+2024-11-24 16:43:37,113 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(843)) - KeyProvider: null
+2024-11-24 16:43:37,113 INFO  [main] namenode.FSNamesystem (FSNamesystemLock.java:<init>(141)) - fsLock is fair: true
+2024-11-24 16:43:37,113 INFO  [main] namenode.FSNamesystem (FSNamesystemLock.java:<init>(159)) - Detailed lock hold time metrics enabled: false
+2024-11-24 16:43:37,113 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(882)) - fsOwner                = tommi (auth:SIMPLE)
+2024-11-24 16:43:37,113 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(883)) - supergroup             = supergroup
+2024-11-24 16:43:37,113 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(884)) - isPermissionEnabled    = true
+2024-11-24 16:43:37,113 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(885)) - isStoragePolicyEnabled = true
+2024-11-24 16:43:37,114 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:<init>(896)) - HA Enabled: false
+2024-11-24 16:43:37,114 INFO  [main] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2024-11-24 16:43:37,114 INFO  [main] blockmanagement.DatanodeManager (DatanodeManager.java:setBlockInvalidateLimit(2125)) - dfs.block.invalidate.limit : configured=1000, counted=60, effected=1000
+2024-11-24 16:43:37,114 INFO  [main] blockmanagement.DatanodeManager (DatanodeManager.java:<init>(322)) - dfs.namenode.datanode.registration.ip-hostname-check=true
+2024-11-24 16:43:37,114 INFO  [main] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(77)) - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2024-11-24 16:43:37,114 INFO  [main] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(83)) - The block deletion will start around 2024 lis 24 16:43:37
+2024-11-24 16:43:37,115 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map BlocksMap
+2024-11-24 16:43:37,115 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:37,115 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 2.0% max memory 3.8 GB = 78.3 MB
+2024-11-24 16:43:37,115 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^23 = 8388608 entries
+2024-11-24 16:43:37,126 INFO  [main] blockmanagement.BlockManager (BlockManager.java:createSPSManager(5480)) - Storage policy satisfier is disabled
+2024-11-24 16:43:37,126 INFO  [main] blockmanagement.BlockManager (BlockManager.java:createBlockTokenSecretManager(633)) - dfs.block.access.token.enable = false
+2024-11-24 16:43:37,126 INFO  [main] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(160)) - dfs.namenode.safemode.threshold-pct = 0.999
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(161)) - dfs.namenode.safemode.min.datanodes = 0
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(163)) - dfs.namenode.safemode.extension = 0
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(619)) - defaultReplication         = 1
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(620)) - maxReplication             = 512
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(621)) - minReplication             = 1
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(622)) - maxReplicationStreams      = 2
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(623)) - redundancyRecheckInterval  = 3000ms
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(624)) - encryptDataTransfer        = false
+2024-11-24 16:43:37,127 INFO  [main] blockmanagement.BlockManager (BlockManager.java:<init>(625)) - maxNumBlocksToLog          = 1000
+2024-11-24 16:43:37,128 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map INodeMap
+2024-11-24 16:43:37,128 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:37,128 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 1.0% max memory 3.8 GB = 39.2 MB
+2024-11-24 16:43:37,128 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^22 = 4194304 entries
+2024-11-24 16:43:37,133 INFO  [main] namenode.FSDirectory (FSDirectory.java:<init>(335)) - ACLs enabled? true
+2024-11-24 16:43:37,134 INFO  [main] namenode.FSDirectory (FSDirectory.java:<init>(339)) - POSIX ACL inheritance enabled? true
+2024-11-24 16:43:37,134 INFO  [main] namenode.FSDirectory (FSDirectory.java:<init>(343)) - XAttrs enabled? true
+2024-11-24 16:43:37,134 INFO  [main] namenode.NameNode (FSDirectory.java:<init>(406)) - Caching file names occurring more than 10 times
+2024-11-24 16:43:37,134 INFO  [main] snapshot.SnapshotManager (SnapshotManager.java:<init>(124)) - Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2024-11-24 16:43:37,134 INFO  [main] snapshot.SnapshotManager (DirectoryDiffListFactory.java:init(43)) - SkipList is disabled
+2024-11-24 16:43:37,134 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map cachedBlocks
+2024-11-24 16:43:37,134 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:37,134 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 0.25% max memory 3.8 GB = 9.8 MB
+2024-11-24 16:43:37,134 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^20 = 1048576 entries
+2024-11-24 16:43:37,136 INFO  [main] metrics.TopMetrics (TopMetrics.java:logConf(75)) - NNTop conf: dfs.namenode.top.window.num.buckets = null
+2024-11-24 16:43:37,136 INFO  [main] metrics.TopMetrics (TopMetrics.java:logConf(77)) - NNTop conf: dfs.namenode.top.num.users = null
+2024-11-24 16:43:37,137 INFO  [main] metrics.TopMetrics (TopMetrics.java:logConf(79)) - NNTop conf: dfs.namenode.top.windows.minutes = null
+2024-11-24 16:43:37,137 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1119)) - Retry cache on namenode is enabled
+2024-11-24 16:43:37,137 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1127)) - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2024-11-24 16:43:37,137 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(408)) - Computing capacity for map NameNodeRetryCache
+2024-11-24 16:43:37,137 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(409)) - VM type       = 64-bit
+2024-11-24 16:43:37,138 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(410)) - 0.029999999329447746% max memory 3.8 GB = 1.2 MB
+2024-11-24 16:43:37,138 INFO  [main] util.GSet (LightWeightGSet.java:computeCapacity(415)) - capacity      = 2^17 = 131072 entries
+2024-11-24 16:43:37,145 INFO  [main] common.Storage (Storage.java:tryLock(948)) - Lock on C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1\in_use.lock acquired by nodename 18968@tom-asus-tuf
+2024-11-24 16:43:37,150 INFO  [main] common.Storage (Storage.java:tryLock(948)) - Lock on C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-2\in_use.lock acquired by nodename 18968@tom-asus-tuf
+2024-11-24 16:43:37,152 INFO  [main] common.Storage (Storage.java:tryLock(948)) - Lock on C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name\in_use.lock acquired by nodename 18968@tom-asus-tuf
+2024-11-24 16:43:37,156 INFO  [main] namenode.FileJournalManager (FileJournalManager.java:recoverUnfinalizedSegments(428)) - Recovering unfinalized segments in C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name\current
+2024-11-24 16:43:37,157 INFO  [main] namenode.FSImage (FSImage.java:loadFSImage(734)) - No edit log streams selected.
+2024-11-24 16:43:37,157 INFO  [main] namenode.FSImage (FSImage.java:loadFSImageFile(800)) - Planning to load image: FSImageFile(file=C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1\current\fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2024-11-24 16:43:37,171 INFO  [main] namenode.FSImageFormatPBINode (FSImageFormatPBINode.java:loadINodeSectionHeader(411)) - Loading 1 INodes.
+2024-11-24 16:43:37,172 INFO  [main] namenode.FSImageFormatPBINode (FSImageFormatPBINode.java:loadINodeSection(369)) - Successfully loaded 1 inodes
+2024-11-24 16:43:37,175 INFO  [main] namenode.FSImageFormatPBINode (FSImageFormatPBINode.java:waitBlocksMapAndNameCacheUpdateFinished(342)) - Completed update blocks map and name cache, total waiting duration 0ms.
+2024-11-24 16:43:37,178 INFO  [main] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:load(255)) - Loaded FSImage in 0 seconds.
+2024-11-24 16:43:37,178 INFO  [main] namenode.FSImage (FSImage.java:loadFSImage(978)) - Loaded image for txid 0 from C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name-0-1\current\fsimage_0000000000000000000
+2024-11-24 16:43:37,180 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:loadFSImage(1241)) - Need to save fs image? false (staleImage=false, haEnabled=false, isRollingUpgrade=false)
+2024-11-24 16:43:37,181 INFO  [main] namenode.FSEditLog (FSEditLog.java:startLogSegment(1407)) - Starting log segment at 1
+2024-11-24 16:43:37,197 INFO  [main] namenode.NameCache (NameCache.java:initialized(143)) - initialized with 0 entries 0 lookups
+2024-11-24 16:43:37,197 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:loadFromDisk(815)) - Finished loading FSImage in 59 msecs
+2024-11-24 16:43:37,280 INFO  [main] namenode.NameNode (NameNodeRpcServer.java:<init>(452)) - RPC server is binding to kubernetes.docker.internal:0
+2024-11-24 16:43:37,280 INFO  [main] namenode.NameNode (NameNodeRpcServer.java:<init>(457)) - Enable NameNode state context:false
+2024-11-24 16:43:37,288 INFO  [main] ipc.CallQueueManager (CallQueueManager.java:<init>(90)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2024-11-24 16:43:37,293 INFO  [main] ipc.Server (Server.java:<init>(1287)) - Listener at kubernetes.docker.internal:50225
+2024-11-24 16:43:37,295 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1323)) - Starting Socket Reader #1 for port 0
+2024-11-24 16:43:37,332 INFO  [main] namenode.NameNode (NameNode.java:initialize(793)) - Clients are to use kubernetes.docker.internal:50225 to access this namenode/service.
+2024-11-24 16:43:37,334 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:registerMBean(5504)) - Registered FSNamesystemState, ReplicatedBlocksState and ECBlockGroupsState MBeans.
+2024-11-24 16:43:37,338 INFO  [main] namenode.LeaseManager (LeaseManager.java:getNumUnderConstructionBlocks(166)) - Number of blocks under construction: 0
+2024-11-24 16:43:37,344 INFO  [main] blockmanagement.DatanodeAdminDefaultMonitor (DatanodeAdminDefaultMonitor.java:processConf(117)) - Initialized the Default Decommission and Maintenance monitor
+2024-11-24 16:43:37,344 INFO  [MarkedDeleteBlockScrubberThread] blockmanagement.BlockManager (BlockManager.java:run(5001)) - Start MarkedDeleteBlockScrubber thread
+2024-11-24 16:43:37,345 INFO  [main] blockmanagement.BlockManager (BlockManager.java:initializeReplQueues(5209)) - initializing replication queues
+2024-11-24 16:43:37,345 INFO  [main] hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(399)) - STATE* Leaving safe mode after 0 secs
+2024-11-24 16:43:37,345 INFO  [main] hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(405)) - STATE* Network topology has 0 racks and 0 datanodes
+2024-11-24 16:43:37,345 INFO  [main] hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(407)) - STATE* UnderReplicatedBlocks has 0 blocks
+2024-11-24 16:43:37,347 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3775)) - Total number of blocks            = 0
+2024-11-24 16:43:37,347 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3776)) - Number of invalid blocks          = 0
+2024-11-24 16:43:37,347 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3777)) - Number of under-replicated blocks = 0
+2024-11-24 16:43:37,347 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3778)) - Number of  over-replicated blocks = 0
+2024-11-24 16:43:37,347 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3780)) - Number of blocks being written    = 0
+2024-11-24 16:43:37,347 INFO  [Reconstruction Queue Initializer] hdfs.StateChange (BlockManager.java:processMisReplicatesAsync(3783)) - STATE* Replication Queue initialization scan for invalid, over- and under-replicated blocks completed in 2 msec
+2024-11-24 16:43:37,365 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1562)) - IPC Server Responder: starting
+2024-11-24 16:43:37,365 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1402)) - IPC Server listener on 0: starting
+2024-11-24 16:43:37,366 INFO  [main] namenode.NameNode (NameNode.java:startCommonServices(910)) - NameNode RPC up at: kubernetes.docker.internal/127.0.0.1:50225
+2024-11-24 16:43:37,367 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:startActiveServices(1353)) - Starting services required for active state
+2024-11-24 16:43:37,367 INFO  [main] namenode.FSDirectory (FSDirectory.java:updateCountForQuota(840)) - Initializing quota with 12 thread(s)
+2024-11-24 16:43:37,369 INFO  [main] namenode.FSDirectory (FSDirectory.java:updateCountForQuota(849)) - Quota initialization completed in 2 milliseconds
+name space=1
+storage space=0
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0, PROVIDED=0
+2024-11-24 16:43:37,371 INFO  [CacheReplicationMonitor(706667834)] blockmanagement.CacheReplicationMonitor (CacheReplicationMonitor.java:run(160)) - Starting CacheReplicationMonitor with interval 30000 milliseconds
+2024-11-24 16:43:37,376 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:startDataNodes(1762)) - Starting DataNode 0 with dfs.datanode.data.dir: [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data1,[DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data2
+2024-11-24 16:43:37,400 INFO  [main] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data1
+2024-11-24 16:43:37,407 INFO  [main] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data2
+2024-11-24 16:43:37,411 INFO  [main] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - DataNode metrics system started (again)
+2024-11-24 16:43:37,413 INFO  [main] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2024-11-24 16:43:37,415 INFO  [main] datanode.BlockScanner (BlockScanner.java:<init>(201)) - Initialized block scanner with targetBytesPerSec 1048576
+2024-11-24 16:43:37,419 INFO  [main] datanode.DataNode (DataNode.java:<init>(563)) - Configured hostname is 127.0.0.1
+2024-11-24 16:43:37,420 INFO  [main] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2024-11-24 16:43:37,423 INFO  [main] datanode.DataNode (DataNode.java:startDataNode(1714)) - Starting DataNode with maxLockedMemory = 0
+2024-11-24 16:43:37,425 INFO  [main] datanode.DataNode (DataNode.java:initDataXceiver(1477)) - Opened streaming server at /127.0.0.1:50226
+2024-11-24 16:43:37,427 INFO  [main] datanode.DataNode (DataXceiverServer.java:<init>(93)) - Balancing bandwidth is 104857600 bytes/s
+2024-11-24 16:43:37,427 INFO  [main] datanode.DataNode (DataXceiverServer.java:<init>(94)) - Number threads for balancing is 100
+2024-11-24 16:43:37,431 INFO  [main] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(82)) - Http request log for http.requests.datanode is not defined
+2024-11-24 16:43:37,431 INFO  [main] http.HttpServer2 (HttpServer2.java:addGlobalFilter(1124)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2024-11-24 16:43:37,435 INFO  [main] http.HttpServer2 (HttpServer2.java:bindListener(1357)) - Jetty bound to port 50227
+2024-11-24 16:43:37,435 INFO  [main] server.Server (Server.java:doStart(375)) - jetty-9.4.51.v20230217; built: 2023-02-17T08:19:37.309Z; git: b45c405e4544384de066f814ed42ae3dceacdd49; jvm 21.0.5+11-LTS
+2024-11-24 16:43:37,435 INFO  [main] server.session (DefaultSessionIdManager.java:doStart(334)) - DefaultSessionIdManager workerName=node0
+2024-11-24 16:43:37,435 INFO  [main] server.session (DefaultSessionIdManager.java:doStart(339)) - No SessionScavenger set, using defaults
+2024-11-24 16:43:37,435 INFO  [main] server.session (HouseKeeper.java:startScavenging(132)) - node0 Scavenging every 600000ms
+2024-11-24 16:43:37,436 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(921)) - Started o.e.j.s.ServletContextHandler@534e58b6{static,/static,jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/static,AVAILABLE}
+2024-11-24 16:43:37,506 INFO  [main] handler.ContextHandler (ContextHandler.java:doStart(921)) - Started o.e.j.w.WebAppContext@6f76c2cc{datanode,/,file:///C:/Users/tommi/AppData/Local/Temp/jetty-localhost-50227-hadoop-hdfs-3_3_6-tests_jar-_-any-17144291971164570740/webapp/,AVAILABLE}{jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/datanode}
+2024-11-24 16:43:37,507 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStart(333)) - Started ServerConnector@12fe1f28{HTTP/1.1, (http/1.1)}{localhost:50227}
+2024-11-24 16:43:37,508 INFO  [main] server.Server (Server.java:doStart(415)) - Started @2009ms
+2024-11-24 16:43:37,663 INFO  [main] web.DatanodeHttpServer (DatanodeHttpServer.java:start(318)) - Listening HTTP traffic on /127.0.0.1:50228
+2024-11-24 16:43:37,664 INFO  [main] datanode.DataNode (DataNode.java:startDataNode(1742)) - dnUserName = tommi
+2024-11-24 16:43:37,664 INFO  [main] datanode.DataNode (DataNode.java:startDataNode(1743)) - supergroup = supergroup
+2024-11-24 16:43:37,664 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@64dae3b7] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2024-11-24 16:43:37,671 INFO  [main] ipc.CallQueueManager (CallQueueManager.java:<init>(90)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2024-11-24 16:43:37,672 INFO  [main] ipc.Server (Server.java:<init>(1287)) - Listener at kubernetes.docker.internal:50229
+2024-11-24 16:43:37,675 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1323)) - Starting Socket Reader #1 for port 0
+2024-11-24 16:43:37,678 INFO  [main] datanode.DataNode (DataNode.java:initIpcServer(1363)) - Opened IPC server at /127.0.0.1:50229
+2024-11-24 16:43:37,692 INFO  [main] datanode.DataNode (BlockPoolManager.java:refreshNamenodes(149)) - Refresh request received for nameservices: null
+2024-11-24 16:43:37,694 INFO  [main] datanode.DataNode (BlockPoolManager.java:doRefreshNamenodes(210)) - Starting BPOfferServices for nameservices: <default>
+2024-11-24 16:43:37,699 INFO  [Thread-57] datanode.DataNode (BPServiceActor.java:run(884)) - Block pool <registering> (Datanode Uuid unassigned) service to kubernetes.docker.internal/127.0.0.1:50225 starting to offer service
+2024-11-24 16:43:37,702 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1562)) - IPC Server Responder: starting
+2024-11-24 16:43:37,702 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1402)) - IPC Server listener on 0: starting
+2024-11-24 16:43:37,821 INFO  [Thread-57] datanode.DataNode (BPOfferService.java:verifyAndSetNamespaceInfo(381)) - Acknowledging ACTIVE Namenode during handshakeBlock pool <registering> (Datanode Uuid unassigned) service to kubernetes.docker.internal/127.0.0.1:50225
+2024-11-24 16:43:37,822 INFO  [Thread-57] common.Storage (DataStorage.java:getParallelVolumeLoadThreadsNum(356)) - Using 2 threads to upgrade data directories (dfs.datanode.parallel.volumes.load.threads.num=2, dataDirs=2)
+2024-11-24 16:43:37,827 INFO  [Thread-57] common.Storage (Storage.java:tryLock(948)) - Lock on C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1\in_use.lock acquired by nodename 18968@tom-asus-tuf
+2024-11-24 16:43:37,827 INFO  [Thread-57] common.Storage (DataStorage.java:loadStorageDirectory(284)) - Storage directory with location [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data1 is not formatted for namespace 164591145. Formatting...
+2024-11-24 16:43:37,827 INFO  [Thread-57] common.Storage (DataStorage.java:createStorageID(160)) - Generated new storageID DS-372c0931-c17b-4113-b3ad-24a30b548a48 for directory C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1 
+2024-11-24 16:43:37,832 INFO  [Thread-57] common.Storage (Storage.java:tryLock(948)) - Lock on C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2\in_use.lock acquired by nodename 18968@tom-asus-tuf
+2024-11-24 16:43:37,832 INFO  [Thread-57] common.Storage (DataStorage.java:loadStorageDirectory(284)) - Storage directory with location [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data2 is not formatted for namespace 164591145. Formatting...
+2024-11-24 16:43:37,834 INFO  [Thread-57] common.Storage (DataStorage.java:createStorageID(160)) - Generated new storageID DS-ef403d7c-7539-482c-be06-f7e3492dd0e7 for directory C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2 
+2024-11-24 16:43:37,846 INFO  [Thread-57] common.Storage (BlockPoolSliceStorage.java:recoverTransitionRead(256)) - Analyzing storage directories for bpid BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:37,846 INFO  [Thread-57] common.Storage (Storage.java:lock(907)) - Locking is disabled for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1\current\BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:37,847 INFO  [Thread-57] common.Storage (BlockPoolSliceStorage.java:loadStorageDirectory(169)) - Block pool storage directory for location [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data1 and block pool id BP-1306939965-192.168.0.28-1732463016488 is not formatted. Formatting ...
+2024-11-24 16:43:37,847 INFO  [Thread-57] common.Storage (BlockPoolSliceStorage.java:format(285)) - Formatting block pool BP-1306939965-192.168.0.28-1732463016488 directory C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1\current\BP-1306939965-192.168.0.28-1732463016488\current
+2024-11-24 16:43:37,860 INFO  [Thread-57] common.Storage (BlockPoolSliceStorage.java:recoverTransitionRead(256)) - Analyzing storage directories for bpid BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:37,861 INFO  [Thread-57] common.Storage (Storage.java:lock(907)) - Locking is disabled for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2\current\BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:37,861 INFO  [Thread-57] common.Storage (BlockPoolSliceStorage.java:loadStorageDirectory(169)) - Block pool storage directory for location [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data2 and block pool id BP-1306939965-192.168.0.28-1732463016488 is not formatted. Formatting ...
+2024-11-24 16:43:37,861 INFO  [Thread-57] common.Storage (BlockPoolSliceStorage.java:format(285)) - Formatting block pool BP-1306939965-192.168.0.28-1732463016488 directory C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2\current\BP-1306939965-192.168.0.28-1732463016488\current
+2024-11-24 16:43:37,864 INFO  [Thread-57] datanode.DataNode (DataNode.java:initStorage(2062)) - Setting up storage: nsid=164591145;bpid=BP-1306939965-192.168.0.28-1732463016488;lv=-57;nsInfo=lv=-66;cid=testClusterID;nsid=164591145;c=1732463016488;bpid=BP-1306939965-192.168.0.28-1732463016488;dnuuid=null
+2024-11-24 16:43:37,867 INFO  [Thread-57] datanode.DataNode (DataNode.java:checkDatanodeUuid(1860)) - Generated and persisted new Datanode UUID 02ff85f0-3553-4630-9b3d-70fa95bd796c
+2024-11-24 16:43:37,877 INFO  [Thread-57] impl.FsDatasetImpl (FsDatasetImpl.java:<init>(310)) - The datanode lock is a read write lock
+2024-11-24 16:43:37,932 INFO  [IPC Server handler 2 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:37,935 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2907)) - dnInfo.length != numDataNodes
+2024-11-24 16:43:37,936 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2831)) - Waiting for cluster to become active
+2024-11-24 16:43:37,937 INFO  [Thread-57] impl.FsDatasetImpl (FsVolumeList.java:addVolume(318)) - Added new volume: DS-372c0931-c17b-4113-b3ad-24a30b548a48
+2024-11-24 16:43:37,937 INFO  [Thread-57] impl.FsDatasetImpl (FsDatasetImpl.java:addVolume(493)) - Added volume - [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data1, StorageType: DISK
+2024-11-24 16:43:37,939 INFO  [Thread-57] impl.FsDatasetImpl (FsVolumeList.java:addVolume(318)) - Added new volume: DS-ef403d7c-7539-482c-be06-f7e3492dd0e7
+2024-11-24 16:43:37,939 INFO  [Thread-57] impl.FsDatasetImpl (FsDatasetImpl.java:addVolume(493)) - Added volume - [DISK]file:/C:/Users/tommi/AppData/Local/Temp/1732463015598-0/data/data2, StorageType: DISK
+2024-11-24 16:43:37,942 INFO  [Thread-57] impl.MemoryMappableBlockLoader (MemoryMappableBlockLoader.java:initialize(48)) - Initializing cache loader: MemoryMappableBlockLoader.
+2024-11-24 16:43:37,943 INFO  [Thread-57] impl.FsDatasetImpl (FsDatasetImpl.java:registerMBean(2345)) - Registered FSDatasetState MBean
+2024-11-24 16:43:37,951 INFO  [Thread-57] impl.FsDatasetImpl (FsDatasetImpl.java:addBlockPool(2859)) - Adding block pool BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:37,952 INFO  [Thread-73] impl.FsDatasetImpl (FsVolumeList.java:run(420)) - Scanning block pool BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1...
+2024-11-24 16:43:37,952 INFO  [Thread-74] impl.FsDatasetImpl (FsVolumeList.java:run(420)) - Scanning block pool BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2...
+2024-11-24 16:43:37,959 WARN  [Thread-74] impl.FsDatasetImpl (BlockPoolSlice.java:loadDfsUsed(342)) - dfsUsed file missing in C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2\current\BP-1306939965-192.168.0.28-1732463016488\current, will proceed with Du for space computation calculation, 
+2024-11-24 16:43:37,959 WARN  [Thread-73] impl.FsDatasetImpl (BlockPoolSlice.java:loadDfsUsed(342)) - dfsUsed file missing in C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1\current\BP-1306939965-192.168.0.28-1732463016488\current, will proceed with Du for space computation calculation, 
+2024-11-24 16:43:37,970 INFO  [Thread-73] impl.FsDatasetImpl (FsVolumeList.java:run(425)) - Time taken to scan block pool BP-1306939965-192.168.0.28-1732463016488 on C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1: 17ms
+2024-11-24 16:43:37,970 INFO  [Thread-74] impl.FsDatasetImpl (FsVolumeList.java:run(425)) - Time taken to scan block pool BP-1306939965-192.168.0.28-1732463016488 on C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2: 16ms
+2024-11-24 16:43:37,970 INFO  [Thread-57] impl.FsDatasetImpl (FsVolumeList.java:addBlockPool(445)) - Total time to scan all replicas for block pool BP-1306939965-192.168.0.28-1732463016488: 18ms
+2024-11-24 16:43:37,971 INFO  [Thread-75] impl.FsDatasetImpl (FsVolumeList.java:run(213)) - Adding replicas to map for block pool BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1...
+2024-11-24 16:43:37,971 INFO  [Thread-76] impl.FsDatasetImpl (FsVolumeList.java:run(213)) - Adding replicas to map for block pool BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2...
+2024-11-24 16:43:37,971 INFO  [Thread-75] impl.BlockPoolSlice (BlockPoolSlice.java:readReplicasFromCache(958)) - Replica Cache file: C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1\current\BP-1306939965-192.168.0.28-1732463016488\current\replicas doesn't exist 
+2024-11-24 16:43:37,971 INFO  [Thread-76] impl.BlockPoolSlice (BlockPoolSlice.java:readReplicasFromCache(958)) - Replica Cache file: C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2\current\BP-1306939965-192.168.0.28-1732463016488\current\replicas doesn't exist 
+2024-11-24 16:43:37,972 INFO  [Thread-75] impl.FsDatasetImpl (FsVolumeList.java:run(218)) - Time to add replicas to map for block pool BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1: 1ms
+2024-11-24 16:43:37,972 INFO  [Thread-76] impl.FsDatasetImpl (FsVolumeList.java:run(218)) - Time to add replicas to map for block pool BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2: 1ms
+2024-11-24 16:43:37,972 INFO  [Thread-57] impl.FsDatasetImpl (FsVolumeList.java:getAllVolumesMap(239)) - Total time to add all replicas to map for block pool BP-1306939965-192.168.0.28-1732463016488: 2ms
+2024-11-24 16:43:37,972 INFO  [Thread-57] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1
+2024-11-24 16:43:37,976 INFO  [Thread-57] checker.DatasetVolumeChecker (DatasetVolumeChecker.java:checkAllVolumes(224)) - Scheduled health check for volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1
+2024-11-24 16:43:37,977 INFO  [Thread-57] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2
+2024-11-24 16:43:37,977 INFO  [Thread-57] checker.DatasetVolumeChecker (DatasetVolumeChecker.java:checkAllVolumes(224)) - Scheduled health check for volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2
+2024-11-24 16:43:37,982 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(385)) - Now scanning bpid BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1
+2024-11-24 16:43:37,982 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(385)) - Now scanning bpid BP-1306939965-192.168.0.28-1732463016488 on volume C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2
+2024-11-24 16:43:37,983 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1)] datanode.VolumeScanner (VolumeScanner.java:getNextBlockToScan(505)) - VolumeScanner(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1, DS-372c0931-c17b-4113-b3ad-24a30b548a48): finished scanning block pool BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:37,983 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2)] datanode.VolumeScanner (VolumeScanner.java:getNextBlockToScan(505)) - VolumeScanner(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2, DS-ef403d7c-7539-482c-be06-f7e3492dd0e7): finished scanning block pool BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:37,984 INFO  [Thread-57] datanode.DirectoryScanner (DirectoryScanner.java:start(330)) - Periodic Directory Tree Verification scan starting in 12612106ms with interval of 21600000ms and throttle limit of -1ms/s
+2024-11-24 16:43:37,989 INFO  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.DataNode (BPServiceActor.java:register(825)) - Block pool BP-1306939965-192.168.0.28-1732463016488 (Datanode Uuid 02ff85f0-3553-4630-9b3d-70fa95bd796c) service to kubernetes.docker.internal/127.0.0.1:50225 beginning handshake with NN
+2024-11-24 16:43:37,997 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(402)) - VolumeScanner(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1, DS-372c0931-c17b-4113-b3ad-24a30b548a48): no suitable block pools found to scan.  Waiting 1814399985 ms.
+2024-11-24 16:43:37,997 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(402)) - VolumeScanner(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2, DS-ef403d7c-7539-482c-be06-f7e3492dd0e7): no suitable block pools found to scan.  Waiting 1814399985 ms.
+2024-11-24 16:43:38,001 INFO  [IPC Server handler 1 on default port 50225] hdfs.StateChange (DatanodeManager.java:registerDatanode(1168)) - BLOCK* registerDatanode: from DatanodeRegistration(127.0.0.1:50226, datanodeUuid=02ff85f0-3553-4630-9b3d-70fa95bd796c, infoPort=50228, infoSecurePort=0, ipcPort=50229, storageInfo=lv=-57;cid=testClusterID;nsid=164591145;c=1732463016488) storage 02ff85f0-3553-4630-9b3d-70fa95bd796c
+2024-11-24 16:43:38,002 INFO  [IPC Server handler 1 on default port 50225] net.NetworkTopology (NetworkTopology.java:add(156)) - Adding a new node: /default-rack/127.0.0.1:50226
+2024-11-24 16:43:38,002 INFO  [IPC Server handler 1 on default port 50225] blockmanagement.BlockReportLeaseManager (BlockReportLeaseManager.java:registerNode(200)) - Registered DN 02ff85f0-3553-4630-9b3d-70fa95bd796c (127.0.0.1:50226).
+2024-11-24 16:43:38,006 INFO  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.DataNode (BPServiceActor.java:register(853)) - Block pool BP-1306939965-192.168.0.28-1732463016488 (Datanode Uuid 02ff85f0-3553-4630-9b3d-70fa95bd796c) service to kubernetes.docker.internal/127.0.0.1:50225 successfully registered with NN
+2024-11-24 16:43:38,007 INFO  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.DataNode (BPServiceActor.java:offerService(674)) - For namenode kubernetes.docker.internal/127.0.0.1:50225 using BLOCKREPORT_INTERVAL of 21600000msecs CACHEREPORT_INTERVAL of 10000msecs Initial delay: 0msecs; heartBeatInterval=3000
+2024-11-24 16:43:38,007 INFO  [ibr-executor-0] datanode.DataNode (BPServiceActor.java:run(1154)) - Starting IBR Task Handler.
+2024-11-24 16:43:38,027 INFO  [IPC Server handler 3 on default port 50225] blockmanagement.DatanodeDescriptor (DatanodeDescriptor.java:updateStorage(1010)) - Adding new storage ID DS-372c0931-c17b-4113-b3ad-24a30b548a48 for DN 127.0.0.1:50226
+2024-11-24 16:43:38,027 INFO  [IPC Server handler 3 on default port 50225] blockmanagement.DatanodeDescriptor (DatanodeDescriptor.java:updateStorage(1010)) - Adding new storage ID DS-ef403d7c-7539-482c-be06-f7e3492dd0e7 for DN 127.0.0.1:50226
+2024-11-24 16:43:38,032 INFO  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.DataNode (BPServiceActor.java:offerService(736)) - After receiving heartbeat response, updating state of namenode kubernetes.docker.internal:50225 to active
+2024-11-24 16:43:38,038 INFO  [IPC Server handler 5 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,043 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2883)) - Cluster is active
+2024-11-24 16:43:38,044 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2811)) - BLOCK* processReport 0x19e2cc77fa08b1bd with lease ID 0xcbde79ac63ca1ced: Processing first storage report for DS-372c0931-c17b-4113-b3ad-24a30b548a48 from datanode DatanodeRegistration(127.0.0.1:50226, datanodeUuid=02ff85f0-3553-4630-9b3d-70fa95bd796c, infoPort=50228, infoSecurePort=0, ipcPort=50229, storageInfo=lv=-57;cid=testClusterID;nsid=164591145;c=1732463016488)
+2024-11-24 16:43:38,044 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2843)) - BLOCK* processReport 0x19e2cc77fa08b1bd with lease ID 0xcbde79ac63ca1ced: from storage DS-372c0931-c17b-4113-b3ad-24a30b548a48 node DatanodeRegistration(127.0.0.1:50226, datanodeUuid=02ff85f0-3553-4630-9b3d-70fa95bd796c, infoPort=50228, infoSecurePort=0, ipcPort=50229, storageInfo=lv=-57;cid=testClusterID;nsid=164591145;c=1732463016488), blocks: 0, hasStaleStorage: true, processing time: 0 msecs, invalidatedBlocks: 0
+2024-11-24 16:43:38,045 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2811)) - BLOCK* processReport 0x19e2cc77fa08b1bd with lease ID 0xcbde79ac63ca1ced: Processing first storage report for DS-ef403d7c-7539-482c-be06-f7e3492dd0e7 from datanode DatanodeRegistration(127.0.0.1:50226, datanodeUuid=02ff85f0-3553-4630-9b3d-70fa95bd796c, infoPort=50228, infoSecurePort=0, ipcPort=50229, storageInfo=lv=-57;cid=testClusterID;nsid=164591145;c=1732463016488)
+2024-11-24 16:43:38,045 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2843)) - BLOCK* processReport 0x19e2cc77fa08b1bd with lease ID 0xcbde79ac63ca1ced: from storage DS-ef403d7c-7539-482c-be06-f7e3492dd0e7 node DatanodeRegistration(127.0.0.1:50226, datanodeUuid=02ff85f0-3553-4630-9b3d-70fa95bd796c, infoPort=50228, infoSecurePort=0, ipcPort=50229, storageInfo=lv=-57;cid=testClusterID;nsid=164591145;c=1732463016488), blocks: 0, hasStaleStorage: false, processing time: 0 msecs, invalidatedBlocks: 0
+2024-11-24 16:43:38,058 INFO  [IPC Server handler 6 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=false	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=delete	src=/user/tommi/peopleinyear/input	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,059 INFO  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.DataNode (BPServiceActor.java:blockReport(456)) - Successfully sent block report 0x19e2cc77fa08b1bd with lease ID 0xcbde79ac63ca1ced to namenode: kubernetes.docker.internal/127.0.0.1:50225,  containing 2 storage report(s), of which we sent 2. The reports had 0 total blocks and used 1 RPC(s). This took 2 msecs to generate and 24 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2024-11-24 16:43:38,059 INFO  [Command processor] datanode.DataNode (BPOfferService.java:processCommandFromActive(768)) - Got finalize command for block pool BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:38,060 INFO  [IPC Server handler 7 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=false	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=delete	src=/user/tommi/peopleinyear/output	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,080 INFO  [IPC Server handler 8 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=mkdirs	src=/user/tommi/peopleinyear/input	dst=null	perm=tommi:supergroup:rwxr-xr-x	proto=rpc
+2024-11-24 16:43:38,090 INFO  [IPC Server handler 9 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/input	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,097 INFO  [IPC Server handler 0 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/input/cetnost-jmena-dnar.csv	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,133 INFO  [IPC Server handler 2 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/user/tommi/peopleinyear/input/cetnost-jmena-dnar.csv	dst=null	perm=tommi:supergroup:rw-r--r--	proto=rpc
+2024-11-24 16:43:38,155 INFO  [IPC Server handler 1 on default port 50225] hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(802)) - BLOCK* allocate blk_1073741825_1001, replicas=127.0.0.1:50226 for /user/tommi/peopleinyear/input/cetnost-jmena-dnar.csv
+2024-11-24 16:43:38,196 INFO  [DataXceiver for client DFSClient_NONMAPREDUCE_866561752_1 at /127.0.0.1:50232 [Receiving block BP-1306939965-192.168.0.28-1732463016488:blk_1073741825_1001]] datanode.DataNode (DataXceiver.java:writeBlock(750)) - Receiving BP-1306939965-192.168.0.28-1732463016488:blk_1073741825_1001 src: /127.0.0.1:50232 dest: /127.0.0.1:50226
+2024-11-24 16:43:38,254 INFO  [PacketResponder: BP-1306939965-192.168.0.28-1732463016488:blk_1073741825_1001, type=LAST_IN_PIPELINE] DataNode.clienttrace (BlockReceiver.java:finalizeBlock(1550)) - src: /127.0.0.1:50232, dest: /127.0.0.1:50226, bytes: 17178174, op: HDFS_WRITE, cliID: DFSClient_NONMAPREDUCE_866561752_1, offset: 0, srvID: 02ff85f0-3553-4630-9b3d-70fa95bd796c, blockid: BP-1306939965-192.168.0.28-1732463016488:blk_1073741825_1001, duration(ns): 37996800
+2024-11-24 16:43:38,254 INFO  [PacketResponder: BP-1306939965-192.168.0.28-1732463016488:blk_1073741825_1001, type=LAST_IN_PIPELINE] datanode.DataNode (BlockReceiver.java:run(1523)) - PacketResponder: BP-1306939965-192.168.0.28-1732463016488:blk_1073741825_1001, type=LAST_IN_PIPELINE terminating
+2024-11-24 16:43:38,266 INFO  [IPC Server handler 5 on default port 50225] namenode.FSNamesystem (FSNamesystem.java:checkBlocksComplete(3201)) - BLOCK* blk_1073741825_1001 is COMMITTED but not COMPLETE(numNodes= 0 <  minimum = 1) in file /user/tommi/peopleinyear/input/cetnost-jmena-dnar.csv
+2024-11-24 16:43:38,670 INFO  [IPC Server handler 6 on default port 50225] hdfs.StateChange (FSNamesystem.java:completeFile(3154)) - DIR* completeFile: /user/tommi/peopleinyear/input/cetnost-jmena-dnar.csv is closed by DFSClient_NONMAPREDUCE_866561752_1
+2024-11-24 16:43:38,685 INFO  [main] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - JobTracker metrics system started (again)
+2024-11-24 16:43:38,691 INFO  [IPC Server handler 7 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,698 WARN  [main] mapreduce.JobResourceUploader (JobResourceUploader.java:uploadJobJar(481)) - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2024-11-24 16:43:38,718 INFO  [IPC Server handler 8 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/input	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,724 INFO  [IPC Server handler 9 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=listStatus	src=/user/tommi/peopleinyear/input	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:38,729 INFO  [main] input.FileInputFormat (FileInputFormat.java:listStatus(300)) - Total input files to process : 1
+2024-11-24 16:43:38,752 INFO  [main] mapreduce.JobSubmitter (JobSubmitter.java:submitJobInternal(202)) - number of splits:1
+2024-11-24 16:43:38,805 INFO  [main] mapreduce.JobSubmitter (JobSubmitter.java:printTokens(298)) - Submitting tokens for job: job_local78260345_0001
+2024-11-24 16:43:38,805 INFO  [main] mapreduce.JobSubmitter (JobSubmitter.java:printTokens(299)) - Executing with tokens: []
+2024-11-24 16:43:38,883 INFO  [main] mapreduce.Job (Job.java:submit(1682)) - The url to track the job: http://localhost:8080/
+2024-11-24 16:43:38,884 INFO  [main] mapreduce.Job (Job.java:monitorAndPrintJob(1727)) - Running job: job_local78260345_0001
+2024-11-24 16:43:38,885 INFO  [Thread-85] mapred.LocalJobRunner (LocalJobRunner.java:createOutputCommitter(501)) - OutputCommitter set in config null
+2024-11-24 16:43:38,893 INFO  [Thread-85] output.PathOutputCommitterFactory (PathOutputCommitterFactory.java:getCommitterFactory(174)) - No output committer factory defined, defaulting to FileOutputCommitterFactory
+2024-11-24 16:43:38,894 INFO  [Thread-85] output.FileOutputCommitter (FileOutputCommitter.java:<init>(142)) - File Output Committer Algorithm version is 2
+2024-11-24 16:43:38,894 INFO  [Thread-85] output.FileOutputCommitter (FileOutputCommitter.java:<init>(157)) - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2024-11-24 16:43:38,894 INFO  [Thread-85] mapred.LocalJobRunner (LocalJobRunner.java:createOutputCommitter(519)) - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2024-11-24 16:43:38,900 INFO  [IPC Server handler 0 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=mkdirs	src=/user/tommi/peopleinyear/output/_temporary/0	dst=null	perm=tommi:supergroup:rwxr-xr-x	proto=rpc
+2024-11-24 16:43:38,921 INFO  [Thread-85] mapred.LocalJobRunner (LocalJobRunner.java:runTasks(478)) - Waiting for map tasks
+2024-11-24 16:43:38,921 INFO  [LocalJobRunner Map Task Executor #0] mapred.LocalJobRunner (LocalJobRunner.java:run(252)) - Starting task: attempt_local78260345_0001_m_000000_0
+2024-11-24 16:43:38,935 INFO  [LocalJobRunner Map Task Executor #0] output.PathOutputCommitterFactory (PathOutputCommitterFactory.java:getCommitterFactory(174)) - No output committer factory defined, defaulting to FileOutputCommitterFactory
+2024-11-24 16:43:38,936 INFO  [LocalJobRunner Map Task Executor #0] output.FileOutputCommitter (FileOutputCommitter.java:<init>(142)) - File Output Committer Algorithm version is 2
+2024-11-24 16:43:38,936 INFO  [LocalJobRunner Map Task Executor #0] output.FileOutputCommitter (FileOutputCommitter.java:<init>(157)) - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2024-11-24 16:43:38,940 INFO  [LocalJobRunner Map Task Executor #0] util.ProcfsBasedProcessTree (ProcfsBasedProcessTree.java:isAvailable(178)) - ProcfsBasedProcessTree currently is supported only on Linux.
+2024-11-24 16:43:38,975 INFO  [LocalJobRunner Map Task Executor #0] mapred.Task (Task.java:initialize(626)) -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@7b621120
+2024-11-24 16:43:38,981 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:runNewMapper(769)) - Processing split: hdfs://kubernetes.docker.internal:50225/user/tommi/peopleinyear/input/cetnost-jmena-dnar.csv:0+17178174
+2024-11-24 16:43:38,997 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:setEquator(1220)) - (EQUATOR) 0 kvi 26214396(104857584)
+2024-11-24 16:43:38,998 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:init(1013)) - mapreduce.task.io.sort.mb: 100
+2024-11-24 16:43:38,998 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:init(1014)) - soft limit at 83886080
+2024-11-24 16:43:38,998 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:init(1015)) - bufstart = 0; bufvoid = 104857600
+2024-11-24 16:43:38,998 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:init(1016)) - kvstart = 26214396; length = 6553600
+2024-11-24 16:43:39,001 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:createSortingCollector(410)) - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2024-11-24 16:43:39,018 INFO  [IPC Server handler 2 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=open	src=/user/tommi/peopleinyear/input/cetnost-jmena-dnar.csv	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:39,528 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:startSpill(1596)) - Spilling map output
+2024-11-24 16:43:39,528 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:startSpill(1597)) - bufstart = 0; bufend = 37604099; bufvoid = 104857600
+2024-11-24 16:43:39,528 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:startSpill(1599)) - kvstart = 26214396(104857584); kvend = 14643908(58575632); length = 11570489/6553600
+2024-11-24 16:43:39,528 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:setEquator(1220)) - (EQUATOR) 48089857 kvi 12022460(48089840)
+2024-11-24 16:43:39,890 INFO  [main] mapreduce.Job (Job.java:monitorAndPrintJob(1748)) - Job job_local78260345_0001 running in uber mode : false
+2024-11-24 16:43:39,890 INFO  [main] mapreduce.Job (Job.java:monitorAndPrintJob(1755)) -  map 0% reduce 0%
+2024-11-24 16:43:40,402 INFO  [SpillThread] mapred.MapTask (MapTask.java:sortAndSpill(1700)) - Finished spill 0
+2024-11-24 16:43:40,402 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:resetSpill(1237)) - (RESET) equator 48089857 kv 12022460(48089840) kvi 9401032(37604128)
+2024-11-24 16:43:40,661 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:startSpill(1596)) - Spilling map output
+2024-11-24 16:43:40,661 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:startSpill(1597)) - bufstart = 48089857; bufend = 85693956; bufvoid = 104857600
+2024-11-24 16:43:40,661 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:startSpill(1599)) - kvstart = 12022460(48089840); kvend = 451972(1807888); length = 11570489/6553600
+2024-11-24 16:43:40,661 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:setEquator(1220)) - (EQUATOR) 96179714 kvi 24044924(96179696)
+2024-11-24 16:43:41,380 INFO  [SpillThread] mapred.MapTask (MapTask.java:sortAndSpill(1700)) - Finished spill 1
+2024-11-24 16:43:41,380 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:resetSpill(1237)) - (RESET) equator 96179714 kv 24044924(96179696) kvi 21423496(85693984)
+2024-11-24 16:43:41,544 INFO  [LocalJobRunner Map Task Executor #0] mapred.LocalJobRunner (LocalJobRunner.java:statusUpdate(634)) - 
+2024-11-24 16:43:41,544 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:flush(1477)) - Starting flush of map output
+2024-11-24 16:43:41,544 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:flush(1499)) - Spilling map output
+2024-11-24 16:43:41,544 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:flush(1500)) - bufstart = 96179714; bufend = 21878172; bufvoid = 104857600
+2024-11-24 16:43:41,544 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:flush(1502)) - kvstart = 24044924(96179696); kvend = 14643064(58572256); length = 9401861/6553600
+2024-11-24 16:43:42,110 INFO  [LocalJobRunner Map Task Executor #0] mapred.MapTask (MapTask.java:sortAndSpill(1700)) - Finished spill 2
+2024-11-24 16:43:42,120 INFO  [LocalJobRunner Map Task Executor #0] mapred.Merger (Merger.java:merge(607)) - Merging 3 sorted segments
+2024-11-24 16:43:42,124 INFO  [LocalJobRunner Map Task Executor #0] mapred.Merger (Merger.java:merge(706)) - Down to the last merge-pass, with 3 segments left of total size: 5262 bytes
+2024-11-24 16:43:42,132 INFO  [LocalJobRunner Map Task Executor #0] mapred.Task (Task.java:done(1244)) - Task:attempt_local78260345_0001_m_000000_0 is done. And is in the process of committing
+2024-11-24 16:43:42,134 INFO  [IPC Server handler 1 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_m_000000_0	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,135 INFO  [LocalJobRunner Map Task Executor #0] mapred.LocalJobRunner (LocalJobRunner.java:statusUpdate(634)) - map > sort
+2024-11-24 16:43:42,135 INFO  [LocalJobRunner Map Task Executor #0] mapred.Task (Task.java:sendDone(1380)) - Task 'attempt_local78260345_0001_m_000000_0' done.
+2024-11-24 16:43:42,137 INFO  [LocalJobRunner Map Task Executor #0] mapred.Task (Task.java:done(1276)) - Final Counters for attempt_local78260345_0001_m_000000_0: Counters: 24
+	File System Counters
+		FILE: Number of bytes read=17183672
+		FILE: Number of bytes written=252130
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=17178174
+		HDFS: Number of bytes written=17178174
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=5
+		HDFS: Number of bytes read erasure-coded=0
+	Map-Reduce Framework
+		Map input records=69537
+		Map output records=8135712
+		Map output bytes=105764256
+		Map output materialized bytes=1761
+		Input split bytes=157
+		Combine input records=8136063
+		Combine output records=468
+		Spilled Records=468
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=34
+		Total committed heap usage (bytes)=673185792
+	File Input Format Counters 
+		Bytes Read=17178174
+2024-11-24 16:43:42,137 INFO  [LocalJobRunner Map Task Executor #0] mapred.LocalJobRunner (LocalJobRunner.java:run(277)) - Finishing task: attempt_local78260345_0001_m_000000_0
+2024-11-24 16:43:42,137 INFO  [Thread-85] mapred.LocalJobRunner (LocalJobRunner.java:runTasks(486)) - map task executor complete.
+2024-11-24 16:43:42,139 INFO  [Thread-85] mapred.LocalJobRunner (LocalJobRunner.java:runTasks(478)) - Waiting for reduce tasks
+2024-11-24 16:43:42,139 INFO  [pool-30-thread-1] mapred.LocalJobRunner (LocalJobRunner.java:run(330)) - Starting task: attempt_local78260345_0001_r_000000_0
+2024-11-24 16:43:42,143 INFO  [pool-30-thread-1] output.PathOutputCommitterFactory (PathOutputCommitterFactory.java:getCommitterFactory(174)) - No output committer factory defined, defaulting to FileOutputCommitterFactory
+2024-11-24 16:43:42,143 INFO  [pool-30-thread-1] output.FileOutputCommitter (FileOutputCommitter.java:<init>(142)) - File Output Committer Algorithm version is 2
+2024-11-24 16:43:42,143 INFO  [pool-30-thread-1] output.FileOutputCommitter (FileOutputCommitter.java:<init>(157)) - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2024-11-24 16:43:42,143 INFO  [pool-30-thread-1] util.ProcfsBasedProcessTree (ProcfsBasedProcessTree.java:isAvailable(178)) - ProcfsBasedProcessTree currently is supported only on Linux.
+2024-11-24 16:43:42,168 INFO  [pool-30-thread-1] mapred.Task (Task.java:initialize(626)) -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@c40c084
+2024-11-24 16:43:42,170 INFO  [pool-30-thread-1] mapred.ReduceTask (ReduceTask.java:run(363)) - Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@31e9046b
+2024-11-24 16:43:42,171 INFO  [pool-30-thread-1] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - JobTracker metrics system started (again)
+2024-11-24 16:43:42,178 INFO  [pool-30-thread-1] reduce.MergeManagerImpl (MergeManagerImpl.java:<init>(208)) - MergerManager: memoryLimit=2874356480, maxSingleShuffleLimit=718589120, mergeThreshold=1897075328, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2024-11-24 16:43:42,179 INFO  [EventFetcher for fetching Map Completion Events] reduce.EventFetcher (EventFetcher.java:run(61)) - attempt_local78260345_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2024-11-24 16:43:42,193 INFO  [localfetcher#1] reduce.LocalFetcher (LocalFetcher.java:copyMapOutput(147)) - localfetcher#1 about to shuffle output of map attempt_local78260345_0001_m_000000_0 decomp: 1757 len: 1761 to MEMORY
+2024-11-24 16:43:42,194 INFO  [localfetcher#1] reduce.InMemoryMapOutput (InMemoryMapOutput.java:doShuffle(94)) - Read 1757 bytes from map-output for attempt_local78260345_0001_m_000000_0
+2024-11-24 16:43:42,196 INFO  [localfetcher#1] reduce.MergeManagerImpl (MergeManagerImpl.java:closeInMemoryFile(323)) - closeInMemoryFile -> map-output of size: 1757, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->1757
+2024-11-24 16:43:42,197 INFO  [EventFetcher for fetching Map Completion Events] reduce.EventFetcher (EventFetcher.java:run(76)) - EventFetcher is interrupted.. Returning
+2024-11-24 16:43:42,198 INFO  [pool-30-thread-1] mapred.LocalJobRunner (LocalJobRunner.java:statusUpdate(634)) - 1 / 1 copied.
+2024-11-24 16:43:42,198 INFO  [pool-30-thread-1] reduce.MergeManagerImpl (MergeManagerImpl.java:finalMerge(699)) - finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2024-11-24 16:43:42,202 INFO  [pool-30-thread-1] mapred.Merger (Merger.java:merge(607)) - Merging 1 sorted segments
+2024-11-24 16:43:42,202 INFO  [pool-30-thread-1] mapred.Merger (Merger.java:merge(706)) - Down to the last merge-pass, with 1 segments left of total size: 1750 bytes
+2024-11-24 16:43:42,204 INFO  [pool-30-thread-1] reduce.MergeManagerImpl (MergeManagerImpl.java:finalMerge(768)) - Merged 1 segments, 1757 bytes to disk to satisfy reduce memory limit
+2024-11-24 16:43:42,204 INFO  [pool-30-thread-1] reduce.MergeManagerImpl (MergeManagerImpl.java:finalMerge(798)) - Merging 1 files, 1761 bytes from disk
+2024-11-24 16:43:42,205 INFO  [pool-30-thread-1] reduce.MergeManagerImpl (MergeManagerImpl.java:finalMerge(813)) - Merging 0 segments, 0 bytes from memory into reduce
+2024-11-24 16:43:42,205 INFO  [pool-30-thread-1] mapred.Merger (Merger.java:merge(607)) - Merging 1 sorted segments
+2024-11-24 16:43:42,205 INFO  [pool-30-thread-1] mapred.Merger (Merger.java:merge(706)) - Down to the last merge-pass, with 1 segments left of total size: 1750 bytes
+2024-11-24 16:43:42,206 INFO  [pool-30-thread-1] mapred.LocalJobRunner (LocalJobRunner.java:statusUpdate(634)) - 1 / 1 copied.
+2024-11-24 16:43:42,208 INFO  [IPC Server handler 5 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_r_000000_0/part-r-00000	dst=null	perm=tommi:supergroup:rw-r--r--	proto=rpc
+2024-11-24 16:43:42,209 INFO  [pool-30-thread-1] Configuration.deprecation (Configuration.java:logDeprecation(1442)) - mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2024-11-24 16:43:42,211 INFO  [IPC Server handler 4 on default port 50225] hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(802)) - BLOCK* allocate blk_1073741826_1002, replicas=127.0.0.1:50226 for /user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_r_000000_0/part-r-00000
+2024-11-24 16:43:42,212 INFO  [DataXceiver for client DFSClient_NONMAPREDUCE_866561752_1 at /127.0.0.1:50236 [Receiving block BP-1306939965-192.168.0.28-1732463016488:blk_1073741826_1002]] datanode.DataNode (DataXceiver.java:writeBlock(750)) - Receiving BP-1306939965-192.168.0.28-1732463016488:blk_1073741826_1002 src: /127.0.0.1:50236 dest: /127.0.0.1:50226
+2024-11-24 16:43:42,221 INFO  [PacketResponder: BP-1306939965-192.168.0.28-1732463016488:blk_1073741826_1002, type=LAST_IN_PIPELINE] DataNode.clienttrace (BlockReceiver.java:finalizeBlock(1550)) - src: /127.0.0.1:50236, dest: /127.0.0.1:50226, bytes: 1295, op: HDFS_WRITE, cliID: DFSClient_NONMAPREDUCE_866561752_1, offset: 0, srvID: 02ff85f0-3553-4630-9b3d-70fa95bd796c, blockid: BP-1306939965-192.168.0.28-1732463016488:blk_1073741826_1002, duration(ns): 1240600
+2024-11-24 16:43:42,221 INFO  [PacketResponder: BP-1306939965-192.168.0.28-1732463016488:blk_1073741826_1002, type=LAST_IN_PIPELINE] datanode.DataNode (BlockReceiver.java:run(1523)) - PacketResponder: BP-1306939965-192.168.0.28-1732463016488:blk_1073741826_1002, type=LAST_IN_PIPELINE terminating
+2024-11-24 16:43:42,222 INFO  [IPC Server handler 7 on default port 50225] hdfs.StateChange (FSNamesystem.java:completeFile(3154)) - DIR* completeFile: /user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_r_000000_0/part-r-00000 is closed by DFSClient_NONMAPREDUCE_866561752_1
+2024-11-24 16:43:42,223 INFO  [pool-30-thread-1] mapred.Task (Task.java:done(1244)) - Task:attempt_local78260345_0001_r_000000_0 is done. And is in the process of committing
+2024-11-24 16:43:42,224 INFO  [IPC Server handler 8 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_r_000000_0	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,224 INFO  [pool-30-thread-1] mapred.LocalJobRunner (LocalJobRunner.java:statusUpdate(634)) - 1 / 1 copied.
+2024-11-24 16:43:42,224 INFO  [pool-30-thread-1] mapred.Task (Task.java:commit(1421)) - Task attempt_local78260345_0001_r_000000_0 is allowed to commit now
+2024-11-24 16:43:42,224 INFO  [IPC Server handler 9 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_r_000000_0	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,226 INFO  [IPC Server handler 0 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,227 INFO  [IPC Server handler 2 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=listStatus	src=/user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_r_000000_0	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,227 INFO  [IPC Server handler 1 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output/part-r-00000	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,233 INFO  [IPC Server handler 3 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=rename	src=/user/tommi/peopleinyear/output/_temporary/0/_temporary/attempt_local78260345_0001_r_000000_0/part-r-00000	dst=/user/tommi/peopleinyear/output/part-r-00000	perm=tommi:supergroup:rw-r--r--	proto=rpc
+2024-11-24 16:43:42,235 INFO  [pool-30-thread-1] output.FileOutputCommitter (FileOutputCommitter.java:commitTask(609)) - Saved output of task 'attempt_local78260345_0001_r_000000_0' to hdfs://kubernetes.docker.internal:50225/user/tommi/peopleinyear/output
+2024-11-24 16:43:42,236 INFO  [pool-30-thread-1] mapred.LocalJobRunner (LocalJobRunner.java:statusUpdate(634)) - reduce > reduce
+2024-11-24 16:43:42,236 INFO  [pool-30-thread-1] mapred.Task (Task.java:sendDone(1380)) - Task 'attempt_local78260345_0001_r_000000_0' done.
+2024-11-24 16:43:42,236 INFO  [pool-30-thread-1] mapred.Task (Task.java:done(1276)) - Final Counters for attempt_local78260345_0001_r_000000_0: Counters: 30
+	File System Counters
+		FILE: Number of bytes read=17187226
+		FILE: Number of bytes written=253891
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=17178174
+		HDFS: Number of bytes written=17179469
+		HDFS: Number of read operations=12
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=7
+		HDFS: Number of bytes read erasure-coded=0
+	Map-Reduce Framework
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=117
+		Reduce shuffle bytes=1761
+		Reduce input records=117
+		Reduce output records=117
+		Spilled Records=117
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=0
+		Total committed heap usage (bytes)=673185792
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Output Format Counters 
+		Bytes Written=1295
+2024-11-24 16:43:42,236 INFO  [pool-30-thread-1] mapred.LocalJobRunner (LocalJobRunner.java:run(353)) - Finishing task: attempt_local78260345_0001_r_000000_0
+2024-11-24 16:43:42,236 INFO  [Thread-85] mapred.LocalJobRunner (LocalJobRunner.java:runTasks(486)) - reduce task executor complete.
+2024-11-24 16:43:42,242 INFO  [IPC Server handler 5 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=delete	src=/user/tommi/peopleinyear/output/_temporary	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,243 INFO  [IPC Server handler 4 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/user/tommi/peopleinyear/output/_SUCCESS	dst=null	perm=tommi:supergroup:rw-r--r--	proto=rpc
+2024-11-24 16:43:42,244 INFO  [IPC Server handler 6 on default port 50225] hdfs.StateChange (FSNamesystem.java:completeFile(3154)) - DIR* completeFile: /user/tommi/peopleinyear/output/_SUCCESS is closed by DFSClient_NONMAPREDUCE_866561752_1
+2024-11-24 16:43:42,897 INFO  [main] mapreduce.Job (Job.java:monitorAndPrintJob(1755)) -  map 100% reduce 100%
+2024-11-24 16:43:42,897 INFO  [main] mapreduce.Job (Job.java:monitorAndPrintJob(1766)) - Job job_local78260345_0001 completed successfully
+2024-11-24 16:43:42,902 INFO  [main] mapreduce.Job (Job.java:monitorAndPrintJob(1773)) - Counters: 36
+	File System Counters
+		FILE: Number of bytes read=34370898
+		FILE: Number of bytes written=506021
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=34356348
+		HDFS: Number of bytes written=34357643
+		HDFS: Number of read operations=19
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=12
+		HDFS: Number of bytes read erasure-coded=0
+	Map-Reduce Framework
+		Map input records=69537
+		Map output records=8135712
+		Map output bytes=105764256
+		Map output materialized bytes=1761
+		Input split bytes=157
+		Combine input records=8136063
+		Combine output records=468
+		Reduce input groups=117
+		Reduce shuffle bytes=1761
+		Reduce input records=117
+		Reduce output records=117
+		Spilled Records=585
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=34
+		Total committed heap usage (bytes)=1346371584
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=17178174
+	File Output Format Counters 
+		Bytes Written=1295
+2024-11-24 16:43:42,905 INFO  [IPC Server handler 7 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=listStatus	src=/user/tommi/peopleinyear/output	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,907 INFO  [IPC Server handler 8 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output/_SUCCESS	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,908 INFO  [IPC Server handler 9 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=open	src=/user/tommi/peopleinyear/output/_SUCCESS	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,912 INFO  [IPC Server handler 0 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=delete	src=/user/tommi/peopleinyear/output/_SUCCESS	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,913 INFO  [IPC Server handler 2 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=getfileinfo	src=/user/tommi/peopleinyear/output/part-r-00000	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,914 INFO  [IPC Server handler 1 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=open	src=/user/tommi/peopleinyear/output/part-r-00000	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,919 WARN  [DataXceiver for client DFSClient_NONMAPREDUCE_866561752_1 at /127.0.0.1:50233 [Sending block BP-1306939965-192.168.0.28-1732463016488:blk_1073741826_1002]] hdfs.DFSUtil (DFSUtil.java:addTransferRateMetric(1908)) - Unexpected value for data transfer bytes=1307 duration=0
+2024-11-24 16:43:42,920 INFO  [IPC Server handler 3 on default port 50225] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8574)) - allowed=true	ugi=tommi (auth:SIMPLE)	ip=/127.0.0.1	cmd=delete	src=/user/tommi/peopleinyear/output/part-r-00000	dst=null	perm=null	proto=rpc
+2024-11-24 16:43:42,920 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:shutdown(2152)) - Shutting down the Mini HDFS Cluster
+2024-11-24 16:43:42,920 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:shutdownDataNode(2200)) - Shutting down DataNode 0
+2024-11-24 16:43:42,921 INFO  [main] datanode.DirectoryScanner (DirectoryScanner.java:shutdown(393)) - Shutdown has been called
+2024-11-24 16:43:42,921 INFO  [org.apache.hadoop.hdfs.server.datanode.DataXceiverServer@54402c04] datanode.DataNode (DataXceiverServer.java:closeAllPeers(395)) - Closing all peers.
+2024-11-24 16:43:42,921 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2)] datanode.VolumeScanner (VolumeScanner.java:run(672)) - VolumeScanner(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2, DS-ef403d7c-7539-482c-be06-f7e3492dd0e7) exiting.
+2024-11-24 16:43:42,921 INFO  [VolumeScannerThread(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1)] datanode.VolumeScanner (VolumeScanner.java:run(672)) - VolumeScanner(C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1, DS-372c0931-c17b-4113-b3ad-24a30b548a48) exiting.
+2024-11-24 16:43:42,928 INFO  [main] handler.ContextHandler (ContextHandler.java:doStop(1159)) - Stopped o.e.j.w.WebAppContext@6f76c2cc{datanode,/,null,STOPPED}{jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/datanode}
+2024-11-24 16:43:42,931 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStop(383)) - Stopped ServerConnector@12fe1f28{HTTP/1.1, (http/1.1)}{localhost:0}
+2024-11-24 16:43:42,931 INFO  [main] server.session (HouseKeeper.java:stopScavenging(149)) - node0 Stopped scavenging
+2024-11-24 16:43:42,931 INFO  [main] handler.ContextHandler (ContextHandler.java:doStop(1159)) - Stopped o.e.j.s.ServletContextHandler@534e58b6{static,/static,jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/static,STOPPED}
+2024-11-24 16:43:42,933 INFO  [main] datanode.DataNode (DataNode.java:shutdown(2397)) - Waiting up to 30 seconds for transfer threads to complete
+2024-11-24 16:43:42,934 INFO  [main] ipc.Server (Server.java:stop(3523)) - Stopping server on 50229
+2024-11-24 16:43:42,934 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1434)) - Stopping IPC Server listener on 0
+2024-11-24 16:43:42,934 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1567)) - Stopping IPC Server Responder
+2024-11-24 16:43:42,934 WARN  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.IncrementalBlockReportManager (IncrementalBlockReportManager.java:waitTillNextIBR(160)) - IncrementalBlockReportManager interrupted
+2024-11-24 16:43:42,934 ERROR [Command processor] datanode.DataNode (BPServiceActor.java:processQueue(1450)) - Command processor encountered interrupt and exit.
+2024-11-24 16:43:42,934 WARN  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.DataNode (BPServiceActor.java:run(931)) - Ending block pool service for: Block pool BP-1306939965-192.168.0.28-1732463016488 (Datanode Uuid 02ff85f0-3553-4630-9b3d-70fa95bd796c) service to kubernetes.docker.internal/127.0.0.1:50225
+2024-11-24 16:43:42,934 WARN  [ibr-executor-0] datanode.IncrementalBlockReportManager (IncrementalBlockReportManager.java:waitTillNextIBR(160)) - IncrementalBlockReportManager interrupted
+2024-11-24 16:43:42,934 WARN  [Command processor] datanode.DataNode (BPServiceActor.java:run(1434)) - Ending command processor service for: Thread[#122,Command processor,5,main]
+2024-11-24 16:43:42,935 INFO  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] datanode.DataNode (BlockPoolManager.java:remove(102)) - Removed Block pool BP-1306939965-192.168.0.28-1732463016488 (Datanode Uuid 02ff85f0-3553-4630-9b3d-70fa95bd796c)
+2024-11-24 16:43:42,935 INFO  [BP-1306939965-192.168.0.28-1732463016488 heartbeating to kubernetes.docker.internal/127.0.0.1:50225] impl.FsDatasetImpl (FsDatasetImpl.java:shutdownBlockPool(2892)) - Removing block pool BP-1306939965-192.168.0.28-1732463016488
+2024-11-24 16:43:42,937 WARN  [refreshUsed-C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data1\current\BP-1306939965-192.168.0.28-1732463016488] fs.CachingGetSpaceUsed (CachingGetSpaceUsed.java:run(231)) - Thread Interrupted waiting to refresh disk information: sleep interrupted
+2024-11-24 16:43:42,937 WARN  [refreshUsed-C:\Users\tommi\AppData\Local\Temp\1732463015598-0\data\data2\current\BP-1306939965-192.168.0.28-1732463016488] fs.CachingGetSpaceUsed (CachingGetSpaceUsed.java:run(231)) - Thread Interrupted waiting to refresh disk information: sleep interrupted
+2024-11-24 16:43:42,938 INFO  [main] impl.FsDatasetAsyncDiskService (FsDatasetAsyncDiskService.java:shutdown(207)) - Shutting down all async disk service threads
+2024-11-24 16:43:42,938 INFO  [main] impl.FsDatasetAsyncDiskService (FsDatasetAsyncDiskService.java:shutdown(215)) - All async disk service threads have been shut down
+2024-11-24 16:43:42,938 INFO  [main] impl.RamDiskAsyncLazyPersistService (RamDiskAsyncLazyPersistService.java:shutdown(186)) - Shutting down all async lazy persist service threads
+2024-11-24 16:43:42,938 INFO  [main] impl.RamDiskAsyncLazyPersistService (RamDiskAsyncLazyPersistService.java:shutdown(193)) - All async lazy persist service threads have been shut down
+2024-11-24 16:43:42,939 INFO  [main] datanode.DataNode (DataNode.java:shutdown(2486)) - Shutdown complete.
+2024-11-24 16:43:42,939 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:stopAndJoinNameNode(2233)) - Shutting down the namenode
+2024-11-24 16:43:42,939 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:stopActiveServices(1466)) - Stopping services started for active state
+2024-11-24 16:43:42,939 INFO  [main] namenode.FSEditLog (FSEditLog.java:endCurrentLogSegment(1457)) - Ending log segment 1, 26
+2024-11-24 16:43:42,939 INFO  [org.apache.hadoop.hdfs.server.namenode.FSNamesystem$LazyPersistFileScrubber@4f9a6c2d] namenode.FSNamesystem (FSNamesystem.java:run(4569)) - LazyPersistFileScrubber was interrupted, exiting
+2024-11-24 16:43:42,939 INFO  [org.apache.hadoop.hdfs.server.namenode.FSNamesystem$NameNodeEditLogRoller@31ddb930] namenode.FSNamesystem (FSNamesystem.java:run(4472)) - NameNodeEditLogRoller was interrupted, exiting
+2024-11-24 16:43:42,939 INFO  [main] namenode.FSEditLog (FSEditLog.java:printStatistics(794)) - Number of transactions: 27 Total time for transactions(ms): 12 Number of transactions batched in Syncs: 3 Number of syncs: 25 SyncTimes(ms): 1 
+2024-11-24 16:43:42,940 INFO  [main] namenode.FileJournalManager (FileJournalManager.java:finalizeLogSegment(145)) - Finalizing edits file C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name\current\edits_inprogress_0000000000000000001 -> C:\Users\tommi\AppData\Local\Temp\1732463015598-0\name\current\edits_0000000000000000001-0000000000000000027
+2024-11-24 16:43:42,941 INFO  [FSEditLogAsync] namenode.FSEditLog (FSEditLogAsync.java:run(270)) - FSEditLogAsync was interrupted, exiting
+2024-11-24 16:43:42,941 INFO  [CacheReplicationMonitor(706667834)] blockmanagement.CacheReplicationMonitor (CacheReplicationMonitor.java:run(169)) - Shutting down CacheReplicationMonitor
+2024-11-24 16:43:42,941 INFO  [main] ipc.Server (Server.java:stop(3523)) - Stopping server on 50225
+2024-11-24 16:43:42,941 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1434)) - Stopping IPC Server listener on 0
+2024-11-24 16:43:42,941 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1567)) - Stopping IPC Server Responder
+2024-11-24 16:43:42,941 INFO  [RedundancyMonitor] blockmanagement.BlockManager (BlockManager.java:run(5059)) - Stopping RedundancyMonitor.
+2024-11-24 16:43:42,941 INFO  [MarkedDeleteBlockScrubberThread] blockmanagement.BlockManager (BlockManager.java:run(5033)) - Stopping MarkedDeleteBlockScrubber.
+2024-11-24 16:43:42,945 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:stopActiveServices(1466)) - Stopping services started for active state
+2024-11-24 16:43:42,945 INFO  [main] namenode.FSNamesystem (FSNamesystem.java:stopStandbyServices(1570)) - Stopping services started for standby state
+2024-11-24 16:43:42,948 INFO  [main] handler.ContextHandler (ContextHandler.java:doStop(1159)) - Stopped o.e.j.w.WebAppContext@4e61e4c2{hdfs,/,null,STOPPED}{jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/hdfs}
+2024-11-24 16:43:42,950 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStop(383)) - Stopped ServerConnector@11841b15{HTTP/1.1, (http/1.1)}{kubernetes.docker.internal:0}
+2024-11-24 16:43:42,950 INFO  [main] server.session (HouseKeeper.java:stopScavenging(149)) - node0 Stopped scavenging
+2024-11-24 16:43:42,950 INFO  [main] handler.ContextHandler (ContextHandler.java:doStop(1159)) - Stopped o.e.j.s.ServletContextHandler@2f879bab{static,/static,jar:file:/C:/Users/tommi/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/3.3.6/5058b645375c6a68f509e167ad6a6ada9642df09/hadoop-hdfs-3.3.6-tests.jar!/webapps/static,STOPPED}
+2024-11-24 16:43:42,969 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:shutdown(2152)) - Shutting down the Mini HDFS Cluster
+2024-11-24 16:43:42,969 INFO  [main] hdfs.MiniDFSCluster (MiniDFSCluster.java:stopAndJoinNameNode(2233)) - Shutting down the namenode
+
+BUILD SUCCESSFUL in 11s
+2 actionable tasks: 1 executed, 1 up-to-date

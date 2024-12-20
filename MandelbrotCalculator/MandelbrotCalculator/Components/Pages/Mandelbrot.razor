@@ -1,0 +1,59 @@
+﻿@page "/"
+@using Akka.Actor
+@using MandelbrotCalculator.Actors
+@inject ActorSystem ActorSystem
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+
+<h3>Mandelbrot Calculator</h3>
+
+<div>
+    <label>Width: <input @bind="Width" type="number" /></label>
+    <label>Height: <input @bind="Height" type="number" /></label>
+    <label>Max Iterations: <input @bind="MaxIterations" type="number" /></label>
+    <label>Number of Workers: <input @bind="NumWorkers" type="number" /></label>
+    <button @onclick="StartComputation">Start Computation</button>
+
+    <p>@Progress</p>
+</div>
+
+@if (Pixels != null)
+{
+    <div>
+        <h4>Result:</h4>
+        <canvas id="mandelbrotCanvas" width="@Width" height="@Height"></canvas>
+    </div>
+}
+
+@code {
+    private int Width { get; set; } = 800;
+    private int Height { get; set; } = 600;
+    private int MaxIterations { get; set; } = 1000;
+    private int NumWorkers { get; set; } = 4;
+    private int[]? Pixels;
+    private string Progress { get; set; } = string.Empty;
+    private IActorRef? coordinator;
+
+    private async Task StartComputation()
+    {
+        Progress = "Computing...";
+        StateHasChanged();
+
+        coordinator ??= ActorSystem.ActorOf(Props.Create(() => new MandelbrotCoordinatorActor()), "coordinator");
+        var result = await coordinator.Ask<MandelbrotResult>(new ComputeMandelbrot(Width, Height, MaxIterations, NumWorkers));
+
+        Progress = "Done!";
+        Pixels = result.Pixels;
+
+        StateHasChanged();
+        await DrawMandelbrot();
+    }
+
+    private async Task DrawMandelbrot()
+    {
+        if (Pixels is not null)
+        {
+            await JSRuntime.InvokeVoidAsync("drawMandelbrot", "mandelbrotCanvas", Width, Height, Pixels, MaxIterations);
+        }
+    }
+}
