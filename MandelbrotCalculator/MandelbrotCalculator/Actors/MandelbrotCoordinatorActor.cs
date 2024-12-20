@@ -14,7 +14,7 @@ public class MandelbrotCoordinatorActor : ReceiveActor
         Receive<ComputeMandelbrot>(msg =>
         {
             _pixels = new int[msg.Width * msg.Height];
-            _pendingChunks = msg.Height / 10; // Divide the work into chunks of 10 rows each
+            _pendingChunks = msg.NumWorkers; // Number of workers equals number of chunks
             _sender = Sender; // Store the original sender to send the result back to
 
             // Create new workers
@@ -23,11 +23,18 @@ public class MandelbrotCoordinatorActor : ReceiveActor
                 _workers.Add(Context.ActorOf(Props.Create(() => new MandelbrotWorkerActor()), $"worker-{i}"));
             }
 
+            // Calculate the number of rows each worker should process
+            int rowsPerWorker = msg.Height / msg.NumWorkers;
+            int remainingRows = msg.Height % msg.NumWorkers;
+
             // Distribute the work to the workers
-            for (int i = 0; i < msg.Height; i += 10)
+            int startRow = 0;
+            for (int i = 0; i < msg.NumWorkers; i++)
             {
-                var worker = _workers[i % msg.NumWorkers];
-                worker.Tell(new ComputeChunk(i, Math.Min(i + 10, msg.Height), msg.Width, msg.Height, msg.MaxIterations));
+                int endRow = startRow + rowsPerWorker + (i < remainingRows ? 1 : 0);
+                var worker = _workers[i];
+                worker.Tell(new ComputeChunk(startRow, endRow, msg.Width, msg.Height, msg.MaxIterations));
+                startRow = endRow;
             }
         });
 
