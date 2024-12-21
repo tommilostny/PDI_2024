@@ -58,3 +58,28 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+#mandelbrotCanvas {
+    border: 1px solid #888;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 900px;
+}
+
+.input-grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-grid label {
+    margin-bottom: 5px;
+}
+
+.input-grid input {
+    padding: 5px;
+    font-size: 1rem;
+}

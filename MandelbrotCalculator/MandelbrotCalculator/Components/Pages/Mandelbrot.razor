@@ -7,15 +7,50 @@
 
 <h3>Mandelbrot Calculator</h3>
 
-<div>
-    <label>Width: <input @bind="Width" type="number" /></label>
-    <label>Height: <input @bind="Height" type="number" /></label>
-    <label>Max Iterations: <input @bind="MaxIterations" type="number" /></label>
-    <label>Number of Workers: <input @bind="NumWorkers" type="number" /></label>
-    <button @onclick="StartComputation">Start Computation</button>
-
-    <p>@Progress</p>
+<div class="input-grid" disabled="@(ComputationStatus is true)">
+    <div>
+        <label>Width:</label>
+        <input @bind="Width" type="number" />
+    </div>
+    <div>
+        <label>Height:</label>
+        <input @bind="Height" type="number" />
+    </div>
+    <div>
+        <label>Max Iterations:</label>
+        <input @bind="MaxIterations" type="number" />
+    </div>
+    <div>
+        <label>Number of Workers:</label>
+        <input @bind="NumWorkers" type="number" />
+    </div>
+    <div>
+        <label>Zoom:</label>
+        <input @bind="Zoom" type="number" step="0.1" />
+    </div>
+    <div>
+        <label>Offset X:</label>
+        <input @bind="OffsetX" type="number" step="0.1" />
+    </div>
+    <div>
+        <label>Offset Y:</label>
+        <input @bind="OffsetY" type="number" step="0.1" />
+    </div>
 </div>
+
+<button class="btn btn-primary mt-3 mb-2" @onclick="StartComputation">Start Computation</button>
+
+@switch (ComputationStatus)
+{
+    case true:
+        <p>Computing...</p>
+        break;
+    case false:
+        <p>Done!</p>
+        break;
+    default:
+        break;
+}
 
 @if (Pixels != null)
 {
@@ -30,23 +65,24 @@
     private int Height { get; set; } = 600;
     private int MaxIterations { get; set; } = 1000;
     private int NumWorkers { get; set; } = 4;
+    private double Zoom { get; set; } = 1.0;
+    private double OffsetX { get; set; } = 0.0;
+    private double OffsetY { get; set; } = 0.0;
     private int[]? Pixels;
-    private string Progress { get; set; } = string.Empty;
-    private IActorRef? coordinator;
+    private bool? ComputationStatus;
 
     private async Task StartComputation()
     {
-        Progress = "Computing...";
+        ComputationStatus = true;
         StateHasChanged();
 
-        coordinator ??= ActorSystem.ActorOf(Props.Create(() => new MandelbrotCoordinatorActor()), "coordinator");
-        var result = await coordinator.Ask<MandelbrotResult>(new ComputeMandelbrot(Width, Height, MaxIterations, NumWorkers));
+        var coordinator = ActorSystem.ActorOf(Props.Create(() => new MandelbrotCoordinatorActor()), "coordinator");
+        var result = await coordinator.Ask<MandelbrotResult>(new ComputeMandelbrot(Width, Height, MaxIterations, NumWorkers, Zoom, OffsetX, OffsetY));
 
-        Progress = "Done!";
         Pixels = result.Pixels;
-
         StateHasChanged();
         await DrawMandelbrot();
+        ComputationStatus = false;
     }
 
     private async Task DrawMandelbrot()

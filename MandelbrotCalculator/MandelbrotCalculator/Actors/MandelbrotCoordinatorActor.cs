@@ -7,7 +7,7 @@ public class MandelbrotCoordinatorActor : ReceiveActor
     private int _pendingChunks;
     private int[]? _pixels;
     private IActorRef? _sender;
-    private List<IActorRef> _workers = [];
+    private List<IActorRef> _workers = new();
 
     public MandelbrotCoordinatorActor()
     {
@@ -33,7 +33,7 @@ public class MandelbrotCoordinatorActor : ReceiveActor
             {
                 int endRow = startRow + rowsPerWorker + (i < remainingRows ? 1 : 0);
                 var worker = _workers[i];
-                worker.Tell(new ComputeChunk(startRow, endRow, msg.Width, msg.Height, msg.MaxIterations));
+                worker.Tell(new ComputeChunk(startRow, endRow, msg.Width, msg.Height, msg.MaxIterations, msg.Zoom, msg.OffsetX, msg.OffsetY));
                 startRow = endRow;
             }
         });
@@ -45,13 +45,19 @@ public class MandelbrotCoordinatorActor : ReceiveActor
                 Array.Copy(result.Pixels, 0, _pixels, result.StartRow * result.Width, result.Pixels.Length);
                 if (--_pendingChunks == 0)
                 {
+                    // Send the result back to the original sender
                     _sender?.Tell(new MandelbrotResult(_pixels));
                     _sender = null;
+
+                    // Stop all workers
                     foreach (var worker in _workers)
                     {
                         Context.Stop(worker);
                     }
                     _workers.Clear();
+
+                    // Stop the coordinator actor itself
+                    Context.Stop(Self);
                 }
             }
         });
