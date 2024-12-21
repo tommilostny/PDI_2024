@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotCalculator", "MandelbrotCalculator\MandelbrotCalculator.csproj", "{D8E84711-47D9-4798-A8F8-639B113595CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotCalculator.Server", "MandelbrotCalculator.Server\MandelbrotCalculator.Server.csproj", "{012FA9B8-37AA-4875-A6B9-3EDE66959070}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotCalculator.Client", "MandelbrotCalculator.Client\MandelbrotCalculator.Client.csproj", "{1A744461-F280-4D96-AE12-519E4B1B14A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotCalculator.WorkerNode", "MandelbrotCalculator.WorkerNode\MandelbrotCalculator.WorkerNode.csproj", "{20339D14-9CBB-465F-A186-0E6EF80CE77B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotCalculator.Shared", "MandelbrotCalculator.Shared\MandelbrotCalculator.Shared.csproj", "{63016E79-638B-42B5-A9FB-87A6C86300AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotCalculator.Gateway", "MandelbrotCalculator.Gateway\MandelbrotCalculator.Gateway.csproj", "{7E843A37-28E4-4B75-852F-373BB6CB9456}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D8E84711-47D9-4798-A8F8-639B113595CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8E84711-47D9-4798-A8F8-639B113595CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8E84711-47D9-4798-A8F8-639B113595CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8E84711-47D9-4798-A8F8-639B113595CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012FA9B8-37AA-4875-A6B9-3EDE66959070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012FA9B8-37AA-4875-A6B9-3EDE66959070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012FA9B8-37AA-4875-A6B9-3EDE66959070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012FA9B8-37AA-4875-A6B9-3EDE66959070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A744461-F280-4D96-AE12-519E4B1B14A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A744461-F280-4D96-AE12-519E4B1B14A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A744461-F280-4D96-AE12-519E4B1B14A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A744461-F280-4D96-AE12-519E4B1B14A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20339D14-9CBB-465F-A186-0E6EF80CE77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20339D14-9CBB-465F-A186-0E6EF80CE77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20339D14-9CBB-465F-A186-0E6EF80CE77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20339D14-9CBB-465F-A186-0E6EF80CE77B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63016E79-638B-42B5-A9FB-87A6C86300AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63016E79-638B-42B5-A9FB-87A6C86300AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63016E79-638B-42B5-A9FB-87A6C86300AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63016E79-638B-42B5-A9FB-87A6C86300AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E843A37-28E4-4B75-852F-373BB6CB9456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E843A37-28E4-4B75-852F-373BB6CB9456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E843A37-28E4-4B75-852F-373BB6CB9456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E843A37-28E4-4B75-852F-373BB6CB9456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
