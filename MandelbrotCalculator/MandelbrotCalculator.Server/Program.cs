@@ -61,9 +61,11 @@ app.UseCors("AllowBlazorClient");
 // Create the endpoint for distributed Mandelbrot computation.
 app.MapGet("/mandelbrot", async (IRequiredActor<MandelbrotWorkRequesterActor> requesterActor, int width, int height, int maxIterations, double zoom, double offsetX, double offsetY) =>
 {
+    // Request the Mandelbrot computation from the actor system.
     var requester = requesterActor.ActorRef;
     var result = await requester.Ask<MandelbrotResult>(new ComputeMandelbrot(width, height, maxIterations, zoom, offsetX, offsetY));
 
+    // Convert the Mandelbrot result to a PNG image.
     using var bitmap = new SKBitmap(width, height);
     for (int y = 0; y < height; y++)
     {
@@ -82,6 +84,7 @@ app.MapGet("/mandelbrot", async (IRequiredActor<MandelbrotWorkRequesterActor> re
     data.SaveTo(memoryStream);
     memoryStream.Seek(0, SeekOrigin.Begin);
 
+    // Send the result back to the client.
     return Results.File(memoryStream, "image/png");
 })
 .WithName("LaunchMandelbrotDistributedComputation");

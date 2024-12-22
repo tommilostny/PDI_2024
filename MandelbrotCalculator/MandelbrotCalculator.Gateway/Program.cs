@@ -23,11 +23,6 @@ var host = new HostBuilder()
             })
             .WithClustering(options: new ClusterOptions
             {
-                // Note that we do not assign the role/tag "worker" to this node, no worker actors will be
-                // deployed in this node.
-                //
-                // If we want the gateway to also work double duty as worker node, we can add the "worker" role/tag
-                // to the Roles array.
                 Roles = ["gateway"],
                 SeedNodes = [ClusterConfig.GatewayAddress]
             })
@@ -40,8 +35,6 @@ var host = new HostBuilder()
             {
                 // The name of this actor ("coordinator") is required, because its absolute path
                 // ("/user/coordinator") will be used as a service path by ClusterClientReceptionist.
-                //
-                // This name has to be unique for all actor names living in this actor system.
                 var coordinatorActor = system.ActorOf(resolver.Props(typeof(MandelbrotCoordinatorActor)), "coordinator");
                 registry.Register<MandelbrotCoordinatorActor>(coordinatorActor);
             })

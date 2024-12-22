@@ -16,6 +16,8 @@ The solution consists of the following projects:
 1. MandelbrotCalculator.Shared: This project contains shared worker actor code, Akka mesages and cluster configuration constants used by the other projects.
 1. MandelbrotCalculator.Client: This is a simple front-end interface build with Blazor WebAssembly for users to send computation requests to the REST API and visualise the result as an image.
 
+This structure is loosely inspired by [Akka.NET clustering code sample](https://github.com/petabridge/akkadotnet-code-samples/tree/master/src/clustering/cluster-client).
+
 ## How It Works
 
 ### Application Flow
