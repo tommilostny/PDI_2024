@@ -65,6 +65,9 @@ Work request computation distributed across nodes:
 The computation result in the Blazor front-end:
 ![Example Image 3](examples/3.png)
 
+Computation of requests from multiple clients (work IDs #10 and #11):
+![Example Image 3](examples/4.png)
+
 ## Conclusion
 
 This project demonstrates a distributed approach to computing the Mandelbrot set using .NET 9, Blazor, and Akka.NET. By leveraging clustering and distributed computing, the application can efficiently perform complex calculations and provide a responsive user experience.
