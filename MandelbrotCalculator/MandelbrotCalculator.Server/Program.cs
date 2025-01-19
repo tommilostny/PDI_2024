@@ -31,11 +31,11 @@ builder.Services.AddAkka(ClusterConfig.SystemName, builder =>
     .WithRemoting(configure: options =>
     {
         options.Port = ClusterConfig.ClusterClientPort;
-        options.HostName = ClusterConfig.HostName;
+        options.HostName = "localhost";
     })
 
     // Setup `ClusterClient` actor to connect to another actor system
-    .WithClusterClient<GatewayClusterClientActor>([$"{ClusterConfig.GatewayAddress}/system/receptionist"])
+    .WithClusterClient<GatewayClusterClientActor>([$"{ClusterConfig.GatewayAddress(null)}/system/receptionist"])
 
     // Setup required actors and startup code
     .WithActors((system, registry, resolver) =>

@@ -11,6 +11,7 @@
     <PackageReference Include="Akka.Serialization.Hyperion" Version="1.5.32" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
     <PackageReference Include="SkiaSharp" Version="3.116.1" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -15,14 +15,14 @@ var host = new HostBuilder()
                 .WithRemoting(configure: options =>
                 {
                     options.Port = ClusterConfig.WorkerPort;
-                    options.HostName = ClusterConfig.HostName;
+                    options.HostName = ClusterConfig.GetLocalIPAddress();
                 })
                 .WithClustering(options: new ClusterOptions
                 {
                     // Giving this cluster node the role/tag "worker" signals that the gateway node can
                     // deploy worker actors in this node using remoting.
                     Roles = [ "worker" ],
-                    SeedNodes = [ ClusterConfig.GatewayAddress ]
+                    SeedNodes = [ ClusterConfig.GatewayAddress(args.Length > 0 ? args[0] : null) ]
                 });
         });
     }).Build();

@@ -19,12 +19,12 @@ var host = new HostBuilder()
             .WithRemoting(configure: options =>
             {
                 options.Port = int.Parse(ClusterConfig.GatewayPort);
-                options.HostName = ClusterConfig.HostName;
+                options.HostName = ClusterConfig.GetLocalIPAddress();
             })
             .WithClustering(options: new ClusterOptions
             {
                 Roles = ["gateway"],
-                SeedNodes = [ClusterConfig.GatewayAddress]
+                SeedNodes = [ClusterConfig.GatewayAddress(null)]
             })
 
             // Setup `ClusterClientReceptionist` to only deploy on nodes with "gateway" role
